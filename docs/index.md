@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 56 production-ready slash commands for Claude Code — from smart commits and mobile development to full AWS infrastructure.
+  tagline: 70 production-ready slash commands for Claude Code — from smart commits and database management to full AWS infrastructure.
   actions:
     - theme: brand
       text: Get Started
@@ -76,15 +76,33 @@ features:
     details: CloudFormation, CDK, Terraform, CloudWatch monitoring, CodePipeline CI/CD, Route 53, Amplify, and Bedrock AI/ML.
     link: /skills/aws-devops/
     linkText: 8 skills →
+
+  - icon: 🐘
+    title: Relational Databases
+    details: PostgreSQL, MySQL, and SQLite — schemas, queries, indexes, extensions (pgvector, PostGIS), replication, and performance tuning.
+    link: /skills/db-relational/
+    linkText: 3 skills →
+
+  - icon: 🍃
+    title: NoSQL Databases
+    details: MongoDB, Redis, Elasticsearch, Cassandra, and Neo4j — document models, caching, full-text search, graph queries, and wide-column design.
+    link: /skills/db-nosql/
+    linkText: 5 skills →
+
+  - icon: 🔧
+    title: ORMs, BaaS & Design
+    details: Prisma, Drizzle, TypeORM, Supabase, Firebase, and schema design — type-safe queries, RLS policies, and ER diagram generation.
+    link: /skills/db-tools/
+    linkText: 6 skills →
 ---
 
 <div class="stats-row">
   <div class="stat">
-    <div class="number">56</div>
+    <div class="number">70</div>
     <div class="label">Skills</div>
   </div>
   <div class="stat">
-    <div class="number">11</div>
+    <div class="number">14</div>
     <div class="label">Categories</div>
   </div>
   <div class="stat">
@@ -92,8 +110,8 @@ features:
     <div class="label">AWS Services</div>
   </div>
   <div class="stat">
-    <div class="number">4</div>
-    <div class="label">Mobile Platforms</div>
+    <div class="number">14</div>
+    <div class="label">Databases</div>
   </div>
 </div>
 
@@ -112,6 +130,8 @@ cd claude-skills
 /aws-lambda nodejs sqs "process orders"
 /aws-cdk typescript "VPC with ECS service"
 /aws-bedrock knowledge-base "product docs RAG"
+/db-postgres "users table with auth and profiles"
+/db-prisma "schema for e-commerce app"
 ```
 
 ## How It Works

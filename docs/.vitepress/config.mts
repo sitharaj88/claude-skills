@@ -35,6 +35,9 @@ export default defineConfig({
           { text: 'AWS Data & Storage', link: '/skills/aws-data/' },
           { text: 'AWS Messaging, Security & Auth', link: '/skills/aws-integration/' },
           { text: 'AWS IaC, DevOps & AI', link: '/skills/aws-devops/' },
+          { text: 'Relational Databases', link: '/skills/db-relational/' },
+          { text: 'NoSQL Databases', link: '/skills/db-nosql/' },
+          { text: 'ORMs, BaaS & Design', link: '/skills/db-tools/' },
         ]
       },
       { text: 'Reference', link: '/reference/skill-format' },
@@ -200,6 +203,44 @@ export default defineConfig({
             { text: 'Route 53', link: '/skills/aws-devops/aws-route53' },
             { text: 'Amplify', link: '/skills/aws-devops/aws-amplify' },
             { text: 'Bedrock', link: '/skills/aws-devops/aws-bedrock' },
+          ]
+        }
+      ],
+      '/skills/db-relational/': [
+        {
+          text: 'Relational Databases',
+          items: [
+            { text: 'Overview', link: '/skills/db-relational/' },
+            { text: 'PostgreSQL', link: '/skills/db-relational/db-postgres' },
+            { text: 'MySQL', link: '/skills/db-relational/db-mysql' },
+            { text: 'SQLite', link: '/skills/db-relational/db-sqlite' },
+          ]
+        }
+      ],
+      '/skills/db-nosql/': [
+        {
+          text: 'NoSQL Databases',
+          items: [
+            { text: 'Overview', link: '/skills/db-nosql/' },
+            { text: 'MongoDB', link: '/skills/db-nosql/db-mongodb' },
+            { text: 'Redis', link: '/skills/db-nosql/db-redis' },
+            { text: 'Elasticsearch', link: '/skills/db-nosql/db-elasticsearch' },
+            { text: 'Cassandra', link: '/skills/db-nosql/db-cassandra' },
+            { text: 'Neo4j', link: '/skills/db-nosql/db-neo4j' },
+          ]
+        }
+      ],
+      '/skills/db-tools/': [
+        {
+          text: 'ORMs, BaaS & Design',
+          items: [
+            { text: 'Overview', link: '/skills/db-tools/' },
+            { text: 'Prisma', link: '/skills/db-tools/db-prisma' },
+            { text: 'Drizzle', link: '/skills/db-tools/db-drizzle' },
+            { text: 'TypeORM', link: '/skills/db-tools/db-typeorm' },
+            { text: 'Supabase', link: '/skills/db-tools/db-supabase' },
+            { text: 'Firebase', link: '/skills/db-tools/db-firebase' },
+            { text: 'Schema Design', link: '/skills/db-tools/db-design' },
           ]
         }
       ],

@@ -1,6 +1,6 @@
 <p align="center">
   <strong>Claude Skills</strong><br>
-  56 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
+  70 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## What is this?
 
-A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits to full AWS infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
+A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
 
 ## Skills
 
@@ -83,6 +83,35 @@ Full coverage for **Android Native**, **iOS Native**, **React Native**, and **Fl
 | Skill | Command | Description |
 |-------|---------|-------------|
 | **Migrate Code** | `/migrate-code [path] [from] [to]` | Migrates between frameworks/patterns — JS→TS, class→hooks, REST→GraphQL, CJS→ESM, and more |
+
+### Relational Databases
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **PostgreSQL** | `/db-postgres [operation]` | Generates schemas, queries, indexes, extensions (pgvector, PostGIS), replication, and performance tuning for PostgreSQL |
+| **MySQL** | `/db-mysql [operation]` | Generates schemas, queries, stored procedures, replication, and InnoDB-optimized configurations for MySQL |
+| **SQLite** | `/db-sqlite [operation]` | Generates schemas, queries, WAL configuration, FTS5, and edge/embedded patterns for SQLite, Turso, and D1 |
+
+### NoSQL Databases
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **MongoDB** | `/db-mongodb [operation]` | Generates document schemas, aggregation pipelines, indexes, Mongoose/Prisma models, and Atlas configurations |
+| **Redis** | `/db-redis [operation]` | Generates data structures, caching strategies, pub/sub, Lua scripts, Streams, and cluster configurations |
+| **Elasticsearch** | `/db-elasticsearch [operation]` | Generates index mappings, Query DSL, analyzers, aggregations, kNN search, and ILM policies |
+| **Cassandra** | `/db-cassandra [operation]` | Generates query-first data models, CQL schemas, partition strategies, and compaction tuning |
+| **Neo4j** | `/db-neo4j [operation]` | Generates graph data models, Cypher queries, GDS algorithms, and relationship-centric schemas |
+
+### ORMs, BaaS & Design
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Prisma** | `/db-prisma [operation]` | Generates Prisma schemas, type-safe queries, migrations, relations, and middleware configurations |
+| **Drizzle** | `/db-drizzle [operation]` | Generates Drizzle ORM schemas, SQL-like query builders, migrations, and multi-dialect configurations |
+| **TypeORM** | `/db-typeorm [operation]` | Generates TypeORM entities, repositories, QueryBuilder patterns, and NestJS integration |
+| **Supabase** | `/db-supabase [operation]` | Generates Supabase schemas with RLS policies, Edge Functions, Realtime subscriptions, and Auth setup |
+| **Firebase** | `/db-firebase [operation]` | Generates Firestore data models, security rules, Cloud Functions, and RTDB configurations |
+| **Schema Design** | `/db-design [entities]` | Designs database schemas with ER diagrams, normalization, access pattern analysis, and migration strategies |
 
 ### AWS — Compute & Networking
 
@@ -206,6 +235,13 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /aws-cdk typescript "VPC with ECS Fargate service"
 /aws-bedrock knowledge-base "product documentation RAG"
 
+# Database
+/db-postgres "users table with auth and profiles"
+/db-mongodb "product catalog with categories"
+/db-redis "session caching with TTL"
+/db-prisma "schema for e-commerce app"
+/db-design "users, orders, products, reviews"
+
 # Security & analysis
 /security-audit full
 /performance-audit backend
@@ -216,7 +252,7 @@ Skills automatically detect your project's framework, conventions, and patterns 
 
 ## Documentation
 
-Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 56 skills with usage guides, examples, and a reference section.
+Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 70 skills with usage guides, examples, and a reference section.
 
 ## Skill Design
 
@@ -261,6 +297,20 @@ claude-skills/
 │   ├── performance-audit/
 │   ├── dependency-audit/
 │   ├── migrate-code/              # Migration (1 skill)
+│   ├── db-postgres/               # Relational Databases (3 skills)
+│   ├── db-mysql/
+│   ├── db-sqlite/
+│   ├── db-mongodb/                # NoSQL Databases (5 skills)
+│   ├── db-redis/
+│   ├── db-elasticsearch/
+│   ├── db-cassandra/
+│   ├── db-neo4j/
+│   ├── db-prisma/                 # ORMs, BaaS & Design (6 skills)
+│   ├── db-drizzle/
+│   ├── db-typeorm/
+│   ├── db-supabase/
+│   ├── db-firebase/
+│   ├── db-design/
 │   ├── aws-lambda/                # AWS Compute & Networking (7 skills)
 │   ├── aws-ec2/
 │   ├── aws-ecs/
