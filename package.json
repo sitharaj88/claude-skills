@@ -1,0 +1,25 @@
+{
+  "name": "claude_skills",
+  "version": "1.0.0",
+  "description": "A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow.",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitharaj88/claude-skills.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sitharaj88/claude-skills/issues"
+  },
+  "homepage": "https://github.com/sitharaj88/claude-skills#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
