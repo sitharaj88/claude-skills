@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Claude Skills',
   description: 'World-class Claude Code skills — custom slash commands that supercharge your development workflow.',
+  base: '/claude-skills/',
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/claude-skills/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#D97706' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Claude Skills' }],
