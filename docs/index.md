@@ -4,16 +4,16 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 56 world-class custom slash commands for Claude Code — from smart commits to full AWS infrastructure.
+  tagline: 56 production-ready slash commands for Claude Code — from smart commits and mobile development to full AWS infrastructure.
   actions:
     - theme: brand
       text: Get Started
       link: /guide/getting-started
     - theme: alt
-      text: Browse Skills
+      text: Browse All Skills
       link: /guide/what-are-skills
     - theme: alt
-      text: GitHub
+      text: View on GitHub
       link: https://github.com/sitharaj88/claude-skills
 
 features:
@@ -49,13 +49,13 @@ features:
 
   - icon: 🛡️
     title: Security & Performance
-    details: OWASP security audits, performance bottleneck analysis, dependency vulnerability scanning, and code migration assistance.
+    details: OWASP security audits, performance bottleneck analysis, dependency vulnerability scanning, and code migration between frameworks.
     link: /skills/security/
     linkText: 4 skills →
 
   - icon: ☁️
     title: AWS Compute & Networking
-    details: Lambda, EC2, ECS/Fargate, EKS, VPC, API Gateway, and CloudFront — production-ready configs with IaC output.
+    details: Lambda, EC2, ECS/Fargate, EKS, VPC, API Gateway, and CloudFront — production-ready infrastructure with IaC output.
     link: /skills/aws-compute/
     linkText: 7 skills →
 
@@ -67,7 +67,7 @@ features:
 
   - icon: 🔐
     title: AWS Security, Messaging & Auth
-    details: IAM least-privilege, Cognito auth, WAF rules, SQS/SNS messaging, EventBridge events, Step Functions workflows, and SES email.
+    details: IAM least-privilege policies, Cognito auth, WAF rules, SQS/SNS messaging, EventBridge events, Step Functions, and SES email.
     link: /skills/aws-integration/
     linkText: 7 skills →
 
@@ -88,8 +88,8 @@ features:
     <div class="label">Categories</div>
   </div>
   <div class="stat">
-    <div class="number">15+</div>
-    <div class="label">Frameworks</div>
+    <div class="number">28</div>
+    <div class="label">AWS Services</div>
   </div>
   <div class="stat">
     <div class="number">4</div>
@@ -111,6 +111,7 @@ cd claude-skills
 /generate-component UserProfile form
 /aws-lambda nodejs sqs "process orders"
 /aws-cdk typescript "VPC with ECS service"
+/aws-bedrock knowledge-base "product docs RAG"
 ```
 
 ## How It Works
@@ -123,6 +124,9 @@ You invoke a skill          Claude analyzes your project       You get tailored 
 /generate-component         Detects React + Tailwind +         Component with Tailwind
   UserProfile form          existing component patterns        classes, TypeScript props,
                                                                test file, and story
+
+/aws-ecs fargate            Detects existing VPC, ALB,         Task definition, service,
+  my-api                    and Docker setup                   Dockerfile, and ALB config
 ```
 
-Skills follow your project's style — if you use CSS Modules, the skill uses CSS Modules. If you use Vitest, the tests use Vitest.
+Skills follow your project's style — if you use CSS Modules, the skill uses CSS Modules. If you use Vitest, the tests use Vitest. If you use CDK, the AWS skill outputs CDK constructs.

@@ -1,6 +1,20 @@
-# claude-skills
+<p align="center">
+  <strong>Claude Skills</strong><br>
+  56 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
+</p>
 
-A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow.
+<p align="center">
+  <a href="https://sitharaj88.github.io/claude-skills/">Documentation</a> &middot;
+  <a href="#installation">Installation</a> &middot;
+  <a href="#skills">All Skills</a> &middot;
+  <a href="#contributing">Contributing</a>
+</p>
+
+---
+
+## What is this?
+
+A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits to full AWS infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
 
 ## Skills
 
@@ -35,7 +49,7 @@ A curated collection of world-class [Claude Code](https://claude.ai/code) skills
 
 ### Mobile Development
 
-Comprehensive coverage for **Android Native**, **iOS Native**, **React Native**, and **Flutter**.
+Full coverage for **Android Native**, **iOS Native**, **React Native**, and **Flutter**.
 
 | Skill | Command | Description |
 |-------|---------|-------------|
@@ -122,7 +136,7 @@ Comprehensive coverage for **Android Native**, **iOS Native**, **React Native**,
 ### Quick install (all skills)
 
 ```bash
-git clone https://github.com/anthropics/claude-skills.git
+git clone https://github.com/sitharaj88/claude-skills.git
 cd claude-skills
 ./install.sh --all
 ```
@@ -131,7 +145,7 @@ cd claude-skills
 
 ```bash
 ./install.sh --skill smart-commit
-./install.sh --skill review-pr
+./install.sh --skill aws-lambda
 ```
 
 ### Interactive picker
@@ -148,14 +162,14 @@ cd claude-skills
 
 ### Manual installation
 
-Symlink individual skills to your Claude Code skills directory:
+Copy individual skills to your Claude Code skills directory:
 
 ```bash
 # Personal (available in all projects)
-ln -s /path/to/claude-skills/skills/smart-commit ~/.claude/skills/smart-commit
+cp -r skills/smart-commit ~/.claude/skills/smart-commit
 
 # Project-specific
-ln -s /path/to/claude-skills/skills/smart-commit .claude/skills/smart-commit
+cp -r skills/smart-commit .claude/skills/smart-commit
 ```
 
 ### Uninstall
@@ -169,19 +183,20 @@ ln -s /path/to/claude-skills/skills/smart-commit .claude/skills/smart-commit
 Once installed, invoke any skill in Claude Code with its slash command:
 
 ```
+# Developer workflow
 /smart-commit
 /review-pr 42
 /test-writer src/utils/parser.ts
+
+# Code generation
 /generate-component UserProfile form
-/analyze-codebase security
+/scaffold-project react-app my-dashboard
+
+# Mobile
 /generate-screen OrderHistory list
 /scaffold-mobile flutter my-app
-/mobile-test-writer HomeScreen ui
-/app-store-prep both 2.1.0
-/docker-setup both db,redis
-/security-audit full
-/migrate-code src/ javascript typescript
-/dependency-audit all
+
+# AWS infrastructure
 /aws-lambda nodejs sqs "process order events"
 /aws-ecs fargate my-api
 /aws-vpc 10.0.0.0/16 us-east-1
@@ -189,9 +204,18 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /aws-iam role lambda "access DynamoDB and S3"
 /aws-cdk typescript "VPC with ECS Fargate service"
 /aws-bedrock knowledge-base "product documentation RAG"
+
+# Security & analysis
+/security-audit full
+/performance-audit backend
+/dependency-audit all
 ```
 
 Skills automatically detect your project's framework, conventions, and patterns — no configuration needed.
+
+## Documentation
+
+Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 56 skills with usage guides, examples, and a reference section.
 
 ## Skill Design
 
@@ -206,80 +230,68 @@ Each skill follows these principles:
 ## Repository Structure
 
 ```
-skills/
-├── smart-commit/SKILL.md           # Conventional commit generation
-├── review-pr/SKILL.md              # PR review with severity ratings
-├── create-pr/SKILL.md              # Structured PR creation
-├── debug-issue/                    # Hypothesis-driven debugging
-│   ├── SKILL.md
-│   └── references/strategies.md
-├── test-writer/SKILL.md            # Framework-aware test generation
-├── generate-component/SKILL.md     # UI component scaffolding
-├── generate-endpoint/SKILL.md      # API endpoint generation
-├── implement-feature/              # Full-stack feature implementation
-│   ├── SKILL.md
-│   └── references/workflow.md
-├── scaffold-project/               # Project scaffolding
-│   ├── SKILL.md
-│   └── templates/
-│       ├── node-api.md
-│       ├── react-app.md
-│       └── cli-tool.md
-├── analyze-codebase/SKILL.md       # Codebase analysis & audit
-├── generate-arch-doc/SKILL.md      # Architecture documentation
-├── generate-api-doc/SKILL.md       # API reference documentation
-├── generate-changelog/SKILL.md     # Changelog from git history
-├── refactor-module/                # Safe incremental refactoring
-│   ├── SKILL.md
-│   └── references/patterns.md
-├── generate-screen/SKILL.md        # Mobile screen generation (all platforms)
-├── scaffold-mobile/                # Mobile project scaffolding
-│   ├── SKILL.md
-│   └── templates/
-│       ├── android.md
-│       ├── ios.md
-│       ├── react-native.md
-│       └── flutter.md
-├── mobile-test-writer/SKILL.md     # Mobile testing (all platforms)
-├── generate-native-bridge/SKILL.md # Native modules & platform channels
-├── app-store-prep/SKILL.md         # App Store & Play Store preparation
-├── mobile-ci-setup/SKILL.md        # Mobile CI/CD automation
-├── generate-migration/SKILL.md     # Database migration generation
-├── docker-setup/SKILL.md           # Docker & docker-compose setup
-├── deploy-config/SKILL.md          # Cloud deployment configuration
-├── setup-monitoring/SKILL.md       # Monitoring, logging & alerting
-├── security-audit/SKILL.md         # OWASP security audit
-├── performance-audit/SKILL.md      # Performance bottleneck analysis
-├── dependency-audit/SKILL.md       # Dependency vulnerability & license audit
-├── migrate-code/SKILL.md           # Code migration & conversion
-├── aws-lambda/SKILL.md             # AWS Lambda functions & deployment
-├── aws-ec2/SKILL.md                # AWS EC2 instances & Auto Scaling
-├── aws-ecs/SKILL.md                # AWS ECS/Fargate containers
-├── aws-eks/SKILL.md                # AWS EKS Kubernetes
-├── aws-vpc/SKILL.md                # AWS VPC networking
-├── aws-api-gateway/SKILL.md        # AWS API Gateway
-├── aws-cloudfront/SKILL.md         # AWS CloudFront CDN
-├── aws-s3/SKILL.md                 # AWS S3 storage
-├── aws-dynamodb/SKILL.md           # AWS DynamoDB design
-├── aws-rds/SKILL.md                # AWS RDS/Aurora databases
-├── aws-elasticache/SKILL.md        # AWS ElastiCache Redis/Memcached
-├── aws-kinesis/SKILL.md            # AWS Kinesis streaming
-├── aws-secrets/SKILL.md            # AWS Secrets Manager & SSM
-├── aws-sqs-sns/SKILL.md            # AWS SQS & SNS messaging
-├── aws-eventbridge/SKILL.md        # AWS EventBridge events
-├── aws-step-functions/SKILL.md     # AWS Step Functions workflows
-├── aws-ses/SKILL.md                # AWS SES email
-├── aws-iam/SKILL.md                # AWS IAM policies & roles
-├── aws-cognito/SKILL.md            # AWS Cognito authentication
-├── aws-waf/SKILL.md                # AWS WAF firewall
-├── aws-cloudformation/SKILL.md     # AWS CloudFormation/SAM templates
-├── aws-cdk/SKILL.md                # AWS CDK constructs
-├── aws-terraform/SKILL.md          # Terraform for AWS
-├── aws-cloudwatch/SKILL.md         # AWS CloudWatch monitoring
-├── aws-codepipeline/SKILL.md       # AWS CodePipeline CI/CD
-├── aws-route53/SKILL.md            # AWS Route 53 DNS
-├── aws-amplify/SKILL.md            # AWS Amplify full-stack
-└── aws-bedrock/SKILL.md            # AWS Bedrock AI/ML
+claude-skills/
+├── skills/
+│   ├── smart-commit/              # Developer Workflow (5 skills)
+│   ├── review-pr/
+│   ├── create-pr/
+│   ├── debug-issue/
+│   ├── test-writer/
+│   ├── generate-component/        # Code Generation (4 skills)
+│   ├── generate-endpoint/
+│   ├── implement-feature/
+│   ├── scaffold-project/
+│   ├── analyze-codebase/          # Analysis & Docs (5 skills)
+│   ├── generate-arch-doc/
+│   ├── generate-api-doc/
+│   ├── generate-changelog/
+│   ├── refactor-module/
+│   ├── generate-screen/           # Mobile Development (6 skills)
+│   ├── scaffold-mobile/
+│   ├── mobile-test-writer/
+│   ├── generate-native-bridge/
+│   ├── app-store-prep/
+│   ├── mobile-ci-setup/
+│   ├── generate-migration/        # Database & DevOps (4 skills)
+│   ├── docker-setup/
+│   ├── deploy-config/
+│   ├── setup-monitoring/
+│   ├── security-audit/            # Security & Performance (3 skills)
+│   ├── performance-audit/
+│   ├── dependency-audit/
+│   ├── migrate-code/              # Migration (1 skill)
+│   ├── aws-lambda/                # AWS Compute & Networking (7 skills)
+│   ├── aws-ec2/
+│   ├── aws-ecs/
+│   ├── aws-eks/
+│   ├── aws-vpc/
+│   ├── aws-api-gateway/
+│   ├── aws-cloudfront/
+│   ├── aws-s3/                    # AWS Data & Storage (6 skills)
+│   ├── aws-dynamodb/
+│   ├── aws-rds/
+│   ├── aws-elasticache/
+│   ├── aws-kinesis/
+│   ├── aws-secrets/
+│   ├── aws-sqs-sns/               # AWS Messaging, Security & Auth (7 skills)
+│   ├── aws-eventbridge/
+│   ├── aws-step-functions/
+│   ├── aws-ses/
+│   ├── aws-iam/
+│   ├── aws-cognito/
+│   ├── aws-waf/
+│   ├── aws-cloudformation/        # AWS IaC, DevOps & AI (8 skills)
+│   ├── aws-cdk/
+│   ├── aws-terraform/
+│   ├── aws-cloudwatch/
+│   ├── aws-codepipeline/
+│   ├── aws-route53/
+│   ├── aws-amplify/
+│   └── aws-bedrock/
+├── docs/                          # VitePress documentation site
+├── install.sh                     # Skill installer (symlink-based)
+├── package.json
+└── README.md
 ```
 
 ## Contributing
@@ -291,6 +303,7 @@ To add a new skill:
 3. Keep SKILL.md under 500 lines — use `references/` for detailed content
 4. Write clear descriptions that explain both **what** and **when**
 5. Test with a fresh Claude Code session before submitting
+6. Add a documentation page in `docs/skills/<category>/`
 
 ## License
 
