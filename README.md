@@ -69,6 +69,54 @@ Comprehensive coverage for **Android Native**, **iOS Native**, **React Native**,
 |-------|---------|-------------|
 | **Migrate Code** | `/migrate-code [path] [from] [to]` | Migrates between frameworks/patterns — JS→TS, class→hooks, REST→GraphQL, CJS→ESM, and more |
 
+### AWS — Compute & Networking
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Lambda** | `/aws-lambda [runtime] [trigger]` | Generates Lambda functions with handlers, IAM roles, event triggers, layers, and SAM/Serverless configs |
+| **EC2** | `/aws-ec2 [type] [os]` | Generates EC2 launch templates, Auto Scaling Groups, user data scripts, and security configurations |
+| **ECS / Fargate** | `/aws-ecs [fargate\|ec2] [name]` | Generates ECS task definitions, services, Dockerfiles, ALB integration, and container orchestration |
+| **EKS** | `/aws-eks [cluster name]` | Generates EKS cluster configs, node groups, Helm charts, add-ons, IRSA, and K8s manifests |
+| **VPC** | `/aws-vpc [CIDR] [region]` | Generates VPC architectures with subnets, NAT gateways, security groups, NACLs, and VPC endpoints |
+| **API Gateway** | `/aws-api-gateway [rest\|http\|websocket]` | Generates REST, HTTP, and WebSocket APIs with authorizers, stages, and custom domains |
+| **CloudFront** | `/aws-cloudfront [static\|api\|media]` | Generates CDN distributions with caching policies, security headers, and edge compute |
+
+### AWS — Data & Storage
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **S3** | `/aws-s3 [purpose]` | Generates S3 bucket configs with policies, lifecycle rules, replication, encryption, and CORS |
+| **DynamoDB** | `/aws-dynamodb [entity] [patterns]` | Designs DynamoDB tables with key schemas, GSIs, single-table design, and access layer code |
+| **RDS / Aurora** | `/aws-rds [engine] [purpose]` | Generates RDS and Aurora configs with multi-AZ, read replicas, backups, and connection management |
+| **ElastiCache** | `/aws-elasticache [redis\|memcached]` | Generates Redis/Memcached clusters with caching strategies, replication, and client code |
+| **Kinesis** | `/aws-kinesis [streams\|firehose]` | Generates real-time streaming configs with producers, consumers, and Firehose delivery |
+| **Secrets Manager** | `/aws-secrets [type]` | Generates Secrets Manager and SSM Parameter Store configs with rotation and secure access |
+
+### AWS — Messaging, Security & Auth
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **SQS & SNS** | `/aws-sqs-sns [sqs\|sns\|both]` | Generates queues, topics, dead-letter queues, fan-out patterns, and consumer code |
+| **EventBridge** | `/aws-eventbridge [pattern]` | Generates event buses, rules, patterns, schemas, and event-driven architectures |
+| **Step Functions** | `/aws-step-functions [type]` | Generates state machine workflows with error handling and service integrations |
+| **SES** | `/aws-ses [type]` | Generates email configs with templates, domain verification (DKIM/SPF/DMARC), and deliverability |
+| **IAM** | `/aws-iam [role\|policy] [service]` | Generates least-privilege IAM policies, roles, trust policies, and permission boundaries |
+| **Cognito** | `/aws-cognito [user-pool\|identity-pool]` | Generates User Pools with OAuth2/OIDC, social login, MFA, and Identity Pools |
+| **WAF** | `/aws-waf [cloudfront\|alb]` | Generates WAF Web ACLs with managed rules, custom rules, rate limiting, and bot control |
+
+### AWS — IaC, DevOps & AI
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **CloudFormation** | `/aws-cloudformation [resources]` | Generates CloudFormation and SAM templates with nested stacks and cross-stack references |
+| **CDK** | `/aws-cdk [language] [resources]` | Generates CDK constructs and stacks in TypeScript or Python with L2/L3 constructs |
+| **Terraform** | `/aws-terraform [resources]` | Generates Terraform modules for AWS with state management, workspaces, and best practices |
+| **CloudWatch** | `/aws-cloudwatch [dashboards\|alarms]` | Generates dashboards, alarms, metrics, log groups, and Log Insights queries |
+| **CodePipeline** | `/aws-codepipeline [source] [target]` | Generates CI/CD pipelines with CodeBuild, CodeDeploy, and deployment strategies |
+| **Route 53** | `/aws-route53 [domain] [type]` | Generates DNS configs with routing policies, health checks, and domain management |
+| **Amplify** | `/aws-amplify [feature] [framework]` | Generates Amplify Gen 2 apps with authentication, data models, storage, and hosting |
+| **Bedrock** | `/aws-bedrock [model\|agent\|kb]` | Generates AI/ML integrations with foundation models, knowledge bases, agents, and guardrails |
+
 ## Installation
 
 ### Quick install (all skills)
@@ -134,6 +182,13 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /security-audit full
 /migrate-code src/ javascript typescript
 /dependency-audit all
+/aws-lambda nodejs sqs "process order events"
+/aws-ecs fargate my-api
+/aws-vpc 10.0.0.0/16 us-east-1
+/aws-dynamodb User "get by email, list by status"
+/aws-iam role lambda "access DynamoDB and S3"
+/aws-cdk typescript "VPC with ECS Fargate service"
+/aws-bedrock knowledge-base "product documentation RAG"
 ```
 
 Skills automatically detect your project's framework, conventions, and patterns — no configuration needed.
@@ -196,7 +251,35 @@ skills/
 ├── security-audit/SKILL.md         # OWASP security audit
 ├── performance-audit/SKILL.md      # Performance bottleneck analysis
 ├── dependency-audit/SKILL.md       # Dependency vulnerability & license audit
-└── migrate-code/SKILL.md           # Code migration & conversion
+├── migrate-code/SKILL.md           # Code migration & conversion
+├── aws-lambda/SKILL.md             # AWS Lambda functions & deployment
+├── aws-ec2/SKILL.md                # AWS EC2 instances & Auto Scaling
+├── aws-ecs/SKILL.md                # AWS ECS/Fargate containers
+├── aws-eks/SKILL.md                # AWS EKS Kubernetes
+├── aws-vpc/SKILL.md                # AWS VPC networking
+├── aws-api-gateway/SKILL.md        # AWS API Gateway
+├── aws-cloudfront/SKILL.md         # AWS CloudFront CDN
+├── aws-s3/SKILL.md                 # AWS S3 storage
+├── aws-dynamodb/SKILL.md           # AWS DynamoDB design
+├── aws-rds/SKILL.md                # AWS RDS/Aurora databases
+├── aws-elasticache/SKILL.md        # AWS ElastiCache Redis/Memcached
+├── aws-kinesis/SKILL.md            # AWS Kinesis streaming
+├── aws-secrets/SKILL.md            # AWS Secrets Manager & SSM
+├── aws-sqs-sns/SKILL.md            # AWS SQS & SNS messaging
+├── aws-eventbridge/SKILL.md        # AWS EventBridge events
+├── aws-step-functions/SKILL.md     # AWS Step Functions workflows
+├── aws-ses/SKILL.md                # AWS SES email
+├── aws-iam/SKILL.md                # AWS IAM policies & roles
+├── aws-cognito/SKILL.md            # AWS Cognito authentication
+├── aws-waf/SKILL.md                # AWS WAF firewall
+├── aws-cloudformation/SKILL.md     # AWS CloudFormation/SAM templates
+├── aws-cdk/SKILL.md                # AWS CDK constructs
+├── aws-terraform/SKILL.md          # Terraform for AWS
+├── aws-cloudwatch/SKILL.md         # AWS CloudWatch monitoring
+├── aws-codepipeline/SKILL.md       # AWS CodePipeline CI/CD
+├── aws-route53/SKILL.md            # AWS Route 53 DNS
+├── aws-amplify/SKILL.md            # AWS Amplify full-stack
+└── aws-bedrock/SKILL.md            # AWS Bedrock AI/ML
 ```
 
 ## Contributing

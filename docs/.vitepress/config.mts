@@ -31,6 +31,10 @@ export default defineConfig({
           { text: 'Database & DevOps', link: '/skills/devops/' },
           { text: 'Security & Performance', link: '/skills/security/' },
           { text: 'Migration', link: '/skills/migration/' },
+          { text: 'AWS Compute & Networking', link: '/skills/aws-compute/' },
+          { text: 'AWS Data & Storage', link: '/skills/aws-data/' },
+          { text: 'AWS Messaging, Security & Auth', link: '/skills/aws-integration/' },
+          { text: 'AWS IaC, DevOps & AI', link: '/skills/aws-devops/' },
         ]
       },
       { text: 'Reference', link: '/reference/skill-format' },
@@ -136,6 +140,66 @@ export default defineConfig({
           items: [
             { text: 'Overview', link: '/skills/migration/' },
             { text: 'Migrate Code', link: '/skills/migration/migrate-code' },
+          ]
+        }
+      ],
+      '/skills/aws-compute/': [
+        {
+          text: 'AWS Compute & Networking',
+          items: [
+            { text: 'Overview', link: '/skills/aws-compute/' },
+            { text: 'Lambda', link: '/skills/aws-compute/aws-lambda' },
+            { text: 'EC2', link: '/skills/aws-compute/aws-ec2' },
+            { text: 'ECS / Fargate', link: '/skills/aws-compute/aws-ecs' },
+            { text: 'EKS', link: '/skills/aws-compute/aws-eks' },
+            { text: 'VPC', link: '/skills/aws-compute/aws-vpc' },
+            { text: 'API Gateway', link: '/skills/aws-compute/aws-api-gateway' },
+            { text: 'CloudFront', link: '/skills/aws-compute/aws-cloudfront' },
+          ]
+        }
+      ],
+      '/skills/aws-data/': [
+        {
+          text: 'AWS Data & Storage',
+          items: [
+            { text: 'Overview', link: '/skills/aws-data/' },
+            { text: 'S3', link: '/skills/aws-data/aws-s3' },
+            { text: 'DynamoDB', link: '/skills/aws-data/aws-dynamodb' },
+            { text: 'RDS / Aurora', link: '/skills/aws-data/aws-rds' },
+            { text: 'ElastiCache', link: '/skills/aws-data/aws-elasticache' },
+            { text: 'Kinesis', link: '/skills/aws-data/aws-kinesis' },
+            { text: 'Secrets Manager', link: '/skills/aws-data/aws-secrets' },
+          ]
+        }
+      ],
+      '/skills/aws-integration/': [
+        {
+          text: 'AWS Messaging, Security & Auth',
+          items: [
+            { text: 'Overview', link: '/skills/aws-integration/' },
+            { text: 'SQS & SNS', link: '/skills/aws-integration/aws-sqs-sns' },
+            { text: 'EventBridge', link: '/skills/aws-integration/aws-eventbridge' },
+            { text: 'Step Functions', link: '/skills/aws-integration/aws-step-functions' },
+            { text: 'SES', link: '/skills/aws-integration/aws-ses' },
+            { text: 'IAM', link: '/skills/aws-integration/aws-iam' },
+            { text: 'Cognito', link: '/skills/aws-integration/aws-cognito' },
+            { text: 'WAF', link: '/skills/aws-integration/aws-waf' },
+          ]
+        }
+      ],
+      '/skills/aws-devops/': [
+        {
+          text: 'AWS IaC, DevOps & AI',
+          items: [
+            { text: 'Overview', link: '/skills/aws-devops/' },
+            { text: 'CloudFormation', link: '/skills/aws-devops/aws-cloudformation' },
+            { text: 'CDK', link: '/skills/aws-devops/aws-cdk' },
+            { text: 'Terraform', link: '/skills/aws-devops/aws-terraform' },
+            { text: 'CloudWatch', link: '/skills/aws-devops/aws-cloudwatch' },
+            { text: 'CodePipeline', link: '/skills/aws-devops/aws-codepipeline' },
+            { text: 'Route 53', link: '/skills/aws-devops/aws-route53' },
+            { text: 'Amplify', link: '/skills/aws-devops/aws-amplify' },
+            { text: 'Bedrock', link: '/skills/aws-devops/aws-bedrock' },
           ]
         }
       ],

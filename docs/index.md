@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 28 world-class custom slash commands for Claude Code — from smart commits to full-stack feature implementation.
+  tagline: 56 world-class custom slash commands for Claude Code — from smart commits to full AWS infrastructure.
   actions:
     - theme: brand
       text: Get Started
@@ -52,15 +52,39 @@ features:
     details: OWASP security audits, performance bottleneck analysis, dependency vulnerability scanning, and code migration assistance.
     link: /skills/security/
     linkText: 4 skills →
+
+  - icon: ☁️
+    title: AWS Compute & Networking
+    details: Lambda, EC2, ECS/Fargate, EKS, VPC, API Gateway, and CloudFront — production-ready configs with IaC output.
+    link: /skills/aws-compute/
+    linkText: 7 skills →
+
+  - icon: 💾
+    title: AWS Data & Storage
+    details: S3, DynamoDB, RDS/Aurora, ElastiCache, Kinesis streaming, and Secrets Manager — from table design to caching strategies.
+    link: /skills/aws-data/
+    linkText: 6 skills →
+
+  - icon: 🔐
+    title: AWS Security, Messaging & Auth
+    details: IAM least-privilege, Cognito auth, WAF rules, SQS/SNS messaging, EventBridge events, Step Functions workflows, and SES email.
+    link: /skills/aws-integration/
+    linkText: 7 skills →
+
+  - icon: 🚀
+    title: AWS IaC, DevOps & AI
+    details: CloudFormation, CDK, Terraform, CloudWatch monitoring, CodePipeline CI/CD, Route 53, Amplify, and Bedrock AI/ML.
+    link: /skills/aws-devops/
+    linkText: 8 skills →
 ---
 
 <div class="stats-row">
   <div class="stat">
-    <div class="number">28</div>
+    <div class="number">56</div>
     <div class="label">Skills</div>
   </div>
   <div class="stat">
-    <div class="number">7</div>
+    <div class="number">11</div>
     <div class="label">Categories</div>
   </div>
   <div class="stat">
@@ -85,7 +109,8 @@ cd claude-skills
 /smart-commit
 /review-pr 42
 /generate-component UserProfile form
-/security-audit full
+/aws-lambda nodejs sqs "process orders"
+/aws-cdk typescript "VPC with ECS service"
 ```
 
 ## How It Works
