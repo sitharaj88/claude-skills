@@ -130,3 +130,22 @@ You invoke a skill          Claude analyzes your project       You get tailored 
 ```
 
 Skills follow your project's style — if you use CSS Modules, the skill uses CSS Modules. If you use Vitest, the tests use Vitest. If you use CDK, the AWS skill outputs CDK constructs.
+
+<div class="author-section">
+  <h2>Made by Sitharaj</h2>
+  <p>If you find Claude Skills useful, consider supporting the project.</p>
+  <div class="author-links">
+    <a href="https://sitharaj.in" target="_blank" class="author-link">
+      <span>Website</span>
+    </a>
+    <a href="https://github.com/sitharaj88" target="_blank" class="author-link">
+      <span>GitHub</span>
+    </a>
+    <a href="https://linkedin.com/in/sitharaj08" target="_blank" class="author-link">
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://buymeacoffee.com/sitharaj88" target="_blank" class="author-link bmc">
+      <span>Buy Me a Coffee</span>
+    </a>
+  </div>
+</div>

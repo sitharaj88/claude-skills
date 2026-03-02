@@ -113,3 +113,67 @@
   font-size: 14px;
   color: var(--vp-c-text-2);
 }
+
+/* Author section */
+.author-section {
+  margin: 48px 0 24px;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  text-align: center;
+}
+
+.author-section h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  border: none;
+}
+
+.author-section p {
+  margin: 0 0 20px 0;
+  color: var(--vp-c-text-2);
+  font-size: 15px;
+}
+
+.author-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg);
+  transition: all 0.25s ease;
+}
+
+.author-link:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.author-link.bmc {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  border-color: var(--vp-c-brand-1);
+}
+
+.author-link.bmc:hover {
+  background: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-2);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}

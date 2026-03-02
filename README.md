@@ -7,7 +7,8 @@
   <a href="https://sitharaj88.github.io/claude-skills/">Documentation</a> &middot;
   <a href="#installation">Installation</a> &middot;
   <a href="#skills">All Skills</a> &middot;
-  <a href="#contributing">Contributing</a>
+  <a href="#contributing">Contributing</a> &middot;
+  <a href="https://buymeacoffee.com/sitharaj88">Buy Me a Coffee</a>
 </p>
 
 ---
@@ -304,6 +305,17 @@ To add a new skill:
 4. Write clear descriptions that explain both **what** and **when**
 5. Test with a fresh Claude Code session before submitting
 6. Add a documentation page in `docs/skills/<category>/`
+
+## Author
+
+**Sitharaj** — Building tools that make developers faster.
+
+- [Website](https://sitharaj.in)
+- [GitHub](https://github.com/sitharaj88)
+- [LinkedIn](https://linkedin.com/in/sitharaj08)
+- [Buy Me a Coffee](https://buymeacoffee.com/sitharaj88)
+
+If Claude Skills saves you time, consider starring the repo or buying me a coffee!
 
 ## License
 
