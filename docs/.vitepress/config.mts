@@ -46,6 +46,9 @@ export default defineConfig({
           { text: 'Azure Data & Storage', link: '/skills/azure-data/' },
           { text: 'Azure Messaging, Security & Identity', link: '/skills/azure-integration/' },
           { text: 'Azure DevOps & AI', link: '/skills/azure-devops/' },
+          { text: 'Cloudflare', link: '/skills/cloudflare/' },
+          { text: 'Vercel', link: '/skills/vercel/' },
+          { text: 'DigitalOcean', link: '/skills/digitalocean/' },
         ]
       },
       { text: 'Reference', link: '/reference/skill-format' },
@@ -369,6 +372,51 @@ export default defineConfig({
             { text: 'Azure DNS', link: '/skills/azure-devops/azure-dns' },
             { text: 'Bicep', link: '/skills/azure-devops/azure-bicep' },
             { text: 'Durable Functions', link: '/skills/azure-devops/azure-durable-functions' },
+          ]
+        }
+      ],
+      '/skills/cloudflare/': [
+        {
+          text: 'Cloudflare',
+          items: [
+            { text: 'Overview', link: '/skills/cloudflare/' },
+            { text: 'Workers', link: '/skills/cloudflare/cf-workers' },
+            { text: 'Pages', link: '/skills/cloudflare/cf-pages' },
+            { text: 'R2', link: '/skills/cloudflare/cf-r2' },
+            { text: 'D1', link: '/skills/cloudflare/cf-d1' },
+            { text: 'KV', link: '/skills/cloudflare/cf-kv' },
+            { text: 'Queues', link: '/skills/cloudflare/cf-queues' },
+            { text: 'Workers AI', link: '/skills/cloudflare/cf-ai' },
+          ]
+        }
+      ],
+      '/skills/vercel/': [
+        {
+          text: 'Vercel',
+          items: [
+            { text: 'Overview', link: '/skills/vercel/' },
+            { text: 'Deploy', link: '/skills/vercel/vercel-deploy' },
+            { text: 'Functions', link: '/skills/vercel/vercel-functions' },
+            { text: 'KV', link: '/skills/vercel/vercel-kv' },
+            { text: 'Postgres', link: '/skills/vercel/vercel-postgres' },
+            { text: 'Blob', link: '/skills/vercel/vercel-blob' },
+            { text: 'AI SDK', link: '/skills/vercel/vercel-ai-sdk' },
+            { text: 'Edge Config', link: '/skills/vercel/vercel-edge-config' },
+          ]
+        }
+      ],
+      '/skills/digitalocean/': [
+        {
+          text: 'DigitalOcean',
+          items: [
+            { text: 'Overview', link: '/skills/digitalocean/' },
+            { text: 'Droplets', link: '/skills/digitalocean/do-droplets' },
+            { text: 'App Platform', link: '/skills/digitalocean/do-app-platform' },
+            { text: 'Kubernetes', link: '/skills/digitalocean/do-kubernetes' },
+            { text: 'Managed Databases', link: '/skills/digitalocean/do-managed-db' },
+            { text: 'Spaces', link: '/skills/digitalocean/do-spaces' },
+            { text: 'Functions', link: '/skills/digitalocean/do-functions' },
+            { text: 'Networking', link: '/skills/digitalocean/do-networking' },
           ]
         }
       ],

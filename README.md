@@ -1,6 +1,6 @@
 <p align="center">
   <strong>Claude Skills</strong><br>
-  126 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
+  147 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## What is this?
 
-A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS, GCP, and Azure infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
+A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS, GCP, Azure, Cloudflare, Vercel, and DigitalOcean infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
 
 ## Skills
 
@@ -257,6 +257,42 @@ Full coverage for **Android Native**, **iOS Native**, **React Native**, and **Fl
 | **Bicep** | `/azure-bicep [resources]` | Generates Bicep templates with modules, deployment stacks, and Azure Verified Modules |
 | **Durable Functions** | `/azure-durable-functions [pattern]` | Generates orchestration patterns — chaining, fan-out, async HTTP, monitor, and saga |
 
+### Cloudflare
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Workers** | `/cf-workers [type]` | Generates Workers with fetch handlers, cron triggers, Durable Objects, queue consumers, and WebSocket support |
+| **Pages** | `/cf-pages [framework]` | Generates Pages projects with SSR framework presets, Functions, middleware, and deployment configs |
+| **R2** | `/cf-r2 [operation]` | Generates R2 object storage with Workers bindings, S3 API compatibility, multipart uploads, and lifecycle rules |
+| **D1** | `/cf-d1 [operation]` | Generates D1 SQLite databases with migrations, parameterized queries, FTS5 search, and Drizzle ORM integration |
+| **KV** | `/cf-kv [pattern]` | Generates Workers KV with caching strategies, feature flags, session management, and rate limiting |
+| **Queues** | `/cf-queues [pattern]` | Generates Queues with producers, consumers, dead-letter queues, fan-out patterns, and batch processing |
+| **Workers AI** | `/cf-ai [operation]` | Generates Workers AI inference, Vectorize vector search, AI Gateway proxy, and RAG pipelines |
+
+### Vercel
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Deploy** | `/vercel-deploy [framework]` | Generates `vercel.json` configs, framework detection, environment variables, custom domains, and monorepo setups |
+| **Functions** | `/vercel-functions [type]` | Generates Serverless Functions, Edge Functions, Middleware, ISR, and streaming responses |
+| **KV** | `/vercel-kv [pattern]` | Generates Redis-backed KV with caching patterns, rate limiting, session management, and feature flags |
+| **Postgres** | `/vercel-postgres [operation]` | Generates Neon Postgres with Drizzle/Prisma schemas, edge queries, connection pooling, and transactions |
+| **Blob** | `/vercel-blob [operation]` | Generates Blob storage with server/client uploads, multipart, image handling, and CDN delivery |
+| **AI SDK** | `/vercel-ai-sdk [operation]` | Generates AI SDK Core/UI with streaming chat, tool calling, structured output, and multi-provider RAG |
+| **Edge Config** | `/vercel-edge-config [pattern]` | Generates Edge Config with feature flags, A/B testing, maintenance mode, and dynamic configuration |
+
+### DigitalOcean
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Droplets** | `/do-droplets [type]` | Generates Droplet configs with load balancers, firewalls, cloud-init, block storage, and monitoring |
+| **App Platform** | `/do-app-platform [name]` | Generates App Platform specs with auto-deploy, scaling, environment variables, and custom domains |
+| **Kubernetes** | `/do-kubernetes [cluster]` | Generates DOKS clusters with node pools, NGINX ingress, cert-manager, persistent volumes, and RBAC |
+| **Managed Databases** | `/do-managed-db [engine]` | Generates managed PostgreSQL, MySQL, Redis, MongoDB, and Kafka with connection pooling and replicas |
+| **Spaces** | `/do-spaces [operation]` | Generates S3-compatible Spaces with CDN, CORS, lifecycle management, and presigned URLs |
+| **Functions** | `/do-functions [runtime]` | Generates serverless functions with project.yml, multi-runtime handlers, triggers, and connected resources |
+| **Networking** | `/do-networking [resource]` | Generates VPCs, DNS zones, cloud firewalls, CDN, load balancers, and network architecture |
+
 ## Installation
 
 ### Quick install (all skills)
@@ -350,6 +386,21 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /azure-openai chat "RAG with AI Search"
 /azure-bicep "VNet with AKS and Cosmos DB"
 
+# Cloudflare
+/cf-workers fetch "REST API with KV caching"
+/cf-d1 "user auth schema with sessions"
+/cf-ai rag "product documentation search"
+
+# Vercel
+/vercel-deploy next.js
+/vercel-ai-sdk chat "multi-provider RAG pipeline"
+/vercel-postgres "e-commerce schema with Drizzle"
+
+# DigitalOcean
+/do-app-platform my-api
+/do-kubernetes production-cluster
+/do-managed-db postgres
+
 # Security & analysis
 /security-audit full
 /performance-audit backend
@@ -360,7 +411,7 @@ Skills automatically detect your project's framework, conventions, and patterns 
 
 ## Documentation
 
-Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 126 skills with usage guides, examples, and a reference section.
+Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 147 skills with usage guides, examples, and a reference section.
 
 ## Skill Design
 
@@ -503,6 +554,27 @@ claude-skills/
 │   ├── azure-dns/
 │   ├── azure-bicep/
 │   └── azure-durable-functions/
+│   ├── cf-workers/                  # Cloudflare (7 skills)
+│   ├── cf-pages/
+│   ├── cf-r2/
+│   ├── cf-d1/
+│   ├── cf-kv/
+│   ├── cf-queues/
+│   ├── cf-ai/
+│   ├── vercel-deploy/               # Vercel (7 skills)
+│   ├── vercel-functions/
+│   ├── vercel-kv/
+│   ├── vercel-postgres/
+│   ├── vercel-blob/
+│   ├── vercel-ai-sdk/
+│   ├── vercel-edge-config/
+│   ├── do-droplets/                 # DigitalOcean (7 skills)
+│   ├── do-app-platform/
+│   ├── do-kubernetes/
+│   ├── do-managed-db/
+│   ├── do-spaces/
+│   ├── do-functions/
+│   └── do-networking/
 ├── docs/                          # VitePress documentation site
 ├── install.sh                     # Skill installer (symlink-based)
 ├── package.json

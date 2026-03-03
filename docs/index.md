@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 126 production-ready slash commands for Claude Code — from smart commits and database management to full AWS, GCP, and Azure infrastructure.
+  tagline: 147 production-ready slash commands for Claude Code — from smart commits and database management to full AWS, GCP, Azure, Cloudflare, Vercel, and DigitalOcean infrastructure.
   actions:
     - theme: brand
       text: Get Started
@@ -142,23 +142,41 @@ features:
     details: DevOps Pipelines, Azure Monitor, Terraform, Azure OpenAI, DNS, Bicep IaC, and Durable Functions for CI/CD and AI workloads.
     link: /skills/azure-devops/
     linkText: 7 skills →
+
+  - icon: 🔶
+    title: Cloudflare
+    details: Workers, Pages, R2, D1, KV, Queues, and Workers AI — edge-first compute, storage, databases, and AI inference at the edge.
+    link: /skills/cloudflare/
+    linkText: 7 skills →
+
+  - icon: ▲
+    title: Vercel
+    details: Deploy, Functions, KV, Postgres, Blob, AI SDK, and Edge Config — full-stack deployment, serverless, storage, and AI integration.
+    link: /skills/vercel/
+    linkText: 7 skills →
+
+  - icon: 🌊
+    title: DigitalOcean
+    details: Droplets, App Platform, Kubernetes, Managed Databases, Spaces, Functions, and Networking — simple, scalable cloud infrastructure.
+    link: /skills/digitalocean/
+    linkText: 7 skills →
 ---
 
 <div class="stats-row">
   <div class="stat">
-    <div class="number">126</div>
+    <div class="number">147</div>
     <div class="label">Skills</div>
   </div>
   <div class="stat">
-    <div class="number">22</div>
+    <div class="number">25</div>
     <div class="label">Categories</div>
   </div>
   <div class="stat">
-    <div class="number">3</div>
-    <div class="label">Cloud Providers</div>
+    <div class="number">6</div>
+    <div class="label">Cloud Platforms</div>
   </div>
   <div class="stat">
-    <div class="number">84</div>
+    <div class="number">105</div>
     <div class="label">Cloud Services</div>
   </div>
 </div>
@@ -186,6 +204,12 @@ cd claude-skills
 /azure-container-apps my-api
 /azure-openai chat "RAG with AI Search"
 /azure-bicep "VNet with AKS and Cosmos DB"
+/cf-workers fetch "REST API with KV caching"
+/cf-ai rag "product documentation search"
+/vercel-deploy next.js
+/vercel-ai-sdk chat "multi-provider RAG"
+/do-app-platform my-api
+/do-kubernetes production-cluster
 ```
 
 ## How It Works
