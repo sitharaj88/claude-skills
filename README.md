@@ -1,6 +1,6 @@
 <p align="center">
   <strong>Claude Skills</strong><br>
-  98 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
+  126 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## What is this?
 
-A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS and GCP infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
+A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS, GCP, and Azure infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
 
 ## Skills
 
@@ -209,6 +209,54 @@ Full coverage for **Android Native**, **iOS Native**, **React Native**, and **Fl
 | **Cloud DNS** | `/gcp-cloud-dns [domain] [type]` | Generates DNS zones, records, DNSSEC, routing policies, and response policies |
 | **Workflows** | `/gcp-workflows [pattern]` | Generates serverless workflow orchestrations with service connectors and error handling |
 
+### Azure — Compute & Networking
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Azure Functions** | `/azure-functions [runtime] [trigger]` | Generates Functions with triggers, bindings, Durable Functions, and deployment configs |
+| **Virtual Machines** | `/azure-vm [size] [os]` | Generates VM configs, Scale Sets, availability zones, and startup scripts |
+| **Container Apps** | `/azure-container-apps [name]` | Generates Container Apps with KEDA scaling, Dapr, traffic splitting, and jobs |
+| **AKS** | `/azure-aks [cluster-name]` | Generates AKS clusters with node pools, Workload Identity, AGIC, and GitOps |
+| **Virtual Network** | `/azure-vnet [cidr] [region]` | Generates VNets with NSGs, Private Endpoints, peering, and Azure Firewall |
+| **Application Gateway** | `/azure-app-gateway [tier] [backend]` | Generates App Gateway v2 with WAF, SSL, path-based routing, and AGIC |
+| **Front Door** | `/azure-front-door [profile-type]` | Generates Front Door with CDN, WAF policies, Private Link origins, and Rules Engine |
+
+### Azure — Data & Storage
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Blob Storage** | `/azure-blob-storage [purpose]` | Generates storage accounts with lifecycle policies, access tiers, ADLS Gen2, and SAS tokens |
+| **Azure SQL** | `/azure-sql [tier] [purpose]` | Generates Azure SQL with elastic pools, geo-replication, Hyperscale, and Always Encrypted |
+| **Cosmos DB** | `/azure-cosmos-db [api] [operation]` | Generates Cosmos DB with multi-model APIs, partitioning, global distribution, and change feed |
+| **Cache for Redis** | `/azure-cache-redis [tier]` | Generates Redis cache with clustering, geo-replication, persistence, and Enterprise modules |
+| **Event Hubs** | `/azure-event-hubs [tier]` | Generates Event Hubs for streaming with Capture, Schema Registry, and Kafka compatibility |
+| **Key Vault** | `/azure-key-vault [operation]` | Generates Key Vault for secrets, keys, certificates with rotation and managed identity |
+| **Synapse Analytics** | `/azure-synapse [operation]` | Generates Synapse workspaces with SQL pools, Spark pools, pipelines, and Synapse Link |
+
+### Azure — Messaging, Security & Identity
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Service Bus** | `/azure-service-bus [pattern]` | Generates queues, topics, sessions, dead-letter handling, and messaging patterns |
+| **Event Grid** | `/azure-event-grid [source] [destination]` | Generates event-driven architectures with system/custom topics, domains, and MQTT broker |
+| **Logic Apps** | `/azure-logic-apps [pattern]` | Generates workflow automations with 400+ connectors, error handling, and B2B integration |
+| **Entra ID** | `/azure-entra-id [scenario]` | Generates app registrations, MSAL auth flows, conditional access, and B2C configs |
+| **RBAC** | `/azure-rbac [type]` | Generates role assignments, custom roles, managed identities, and Azure Policy |
+| **API Management** | `/azure-api-management [operation]` | Generates APIM with policies, products, JWT validation, and developer portal |
+| **App Configuration** | `/azure-app-config [operation]` | Generates App Configuration with feature flags, Key Vault references, and dynamic refresh |
+
+### Azure — DevOps & AI
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **DevOps Pipelines** | `/azure-devops-pipelines [type]` | Generates YAML pipelines with stages, deployment strategies, templates, and approvals |
+| **Azure Monitor** | `/azure-monitor [type]` | Generates alerts, Log Analytics KQL queries, Application Insights, and dashboards |
+| **Terraform** | `/azure-terraform [resources]` | Generates Terraform configs for Azure with modules, state management, and Azure Verified Modules |
+| **Azure OpenAI** | `/azure-openai [operation]` | Generates OpenAI deployments, chat completions, RAG with AI Search, and Assistants API |
+| **Azure DNS** | `/azure-dns [domain] [type]` | Generates DNS zones, records, Traffic Manager routing, and alias records |
+| **Bicep** | `/azure-bicep [resources]` | Generates Bicep templates with modules, deployment stacks, and Azure Verified Modules |
+| **Durable Functions** | `/azure-durable-functions [pattern]` | Generates orchestration patterns — chaining, fan-out, async HTTP, monitor, and saga |
+
 ## Installation
 
 ### Quick install (all skills)
@@ -291,13 +339,16 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /db-design "users, orders, products, reviews"
 
 # GCP infrastructure
-/gcp-cloud-functions nodejs20 pubsub "process events"
 /gcp-cloud-run service my-api
-/gcp-gke my-cluster
 /gcp-bigquery "analytics pipeline with partitioning"
-/gcp-iam service-account "Cloud Run with BigQuery access"
 /gcp-terraform "VPC with Cloud Run and Cloud SQL"
-/gcp-vertex-ai "RAG pipeline with Gemini"
+
+# Azure infrastructure
+/azure-functions node http "process webhooks"
+/azure-container-apps my-api
+/azure-cosmos-db nosql "multi-region product catalog"
+/azure-openai chat "RAG with AI Search"
+/azure-bicep "VNet with AKS and Cosmos DB"
 
 # Security & analysis
 /security-audit full
@@ -309,7 +360,7 @@ Skills automatically detect your project's framework, conventions, and patterns 
 
 ## Documentation
 
-Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 98 skills with usage guides, examples, and a reference section.
+Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 126 skills with usage guides, examples, and a reference section.
 
 ## Skill Design
 
@@ -423,7 +474,35 @@ claude-skills/
 │   ├── gcp-terraform/
 │   ├── gcp-vertex-ai/
 │   ├── gcp-cloud-dns/
-│   └── gcp-workflows/
+│   ├── gcp-workflows/
+│   ├── azure-functions/             # Azure Compute & Networking (7 skills)
+│   ├── azure-vm/
+│   ├── azure-container-apps/
+│   ├── azure-aks/
+│   ├── azure-vnet/
+│   ├── azure-app-gateway/
+│   ├── azure-front-door/
+│   ├── azure-blob-storage/          # Azure Data & Storage (7 skills)
+│   ├── azure-sql/
+│   ├── azure-cosmos-db/
+│   ├── azure-cache-redis/
+│   ├── azure-event-hubs/
+│   ├── azure-key-vault/
+│   ├── azure-synapse/
+│   ├── azure-service-bus/           # Azure Messaging, Security & Identity (7 skills)
+│   ├── azure-event-grid/
+│   ├── azure-logic-apps/
+│   ├── azure-entra-id/
+│   ├── azure-rbac/
+│   ├── azure-api-management/
+│   ├── azure-app-config/
+│   ├── azure-devops-pipelines/      # Azure DevOps & AI (7 skills)
+│   ├── azure-monitor/
+│   ├── azure-terraform/
+│   ├── azure-openai/
+│   ├── azure-dns/
+│   ├── azure-bicep/
+│   └── azure-durable-functions/
 ├── docs/                          # VitePress documentation site
 ├── install.sh                     # Skill installer (symlink-based)
 ├── package.json

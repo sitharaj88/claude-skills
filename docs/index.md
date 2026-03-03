@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 98 production-ready slash commands for Claude Code — from smart commits and database management to full AWS and GCP infrastructure.
+  tagline: 126 production-ready slash commands for Claude Code — from smart commits and database management to full AWS, GCP, and Azure infrastructure.
   actions:
     - theme: brand
       text: Get Started
@@ -118,24 +118,48 @@ features:
     details: Cloud Build, Cloud Deploy, Cloud Monitoring, Terraform, Vertex AI, Cloud DNS, and Workflows for CI/CD and ML pipelines.
     link: /skills/gcp-devops/
     linkText: 7 skills →
+
+  - icon: 🔷
+    title: Azure Compute & Networking
+    details: Azure Functions, VMs, Container Apps, AKS, VNet, Application Gateway, and Front Door — production-ready Azure infrastructure.
+    link: /skills/azure-compute/
+    linkText: 7 skills →
+
+  - icon: 💎
+    title: Azure Data & Storage
+    details: Blob Storage, Azure SQL, Cosmos DB, Cache for Redis, Event Hubs, Key Vault, and Synapse Analytics — from NoSQL to data warehousing.
+    link: /skills/azure-data/
+    linkText: 7 skills →
+
+  - icon: 🔒
+    title: Azure Security, Messaging & Identity
+    details: Entra ID, RBAC, Service Bus, Event Grid, Logic Apps, API Management, and App Configuration for enterprise integration.
+    link: /skills/azure-integration/
+    linkText: 7 skills →
+
+  - icon: 🧠
+    title: Azure DevOps & AI
+    details: DevOps Pipelines, Azure Monitor, Terraform, Azure OpenAI, DNS, Bicep IaC, and Durable Functions for CI/CD and AI workloads.
+    link: /skills/azure-devops/
+    linkText: 7 skills →
 ---
 
 <div class="stats-row">
   <div class="stat">
-    <div class="number">98</div>
+    <div class="number">126</div>
     <div class="label">Skills</div>
   </div>
   <div class="stat">
-    <div class="number">18</div>
+    <div class="number">22</div>
     <div class="label">Categories</div>
   </div>
   <div class="stat">
-    <div class="number">28</div>
-    <div class="label">AWS Services</div>
+    <div class="number">3</div>
+    <div class="label">Cloud Providers</div>
   </div>
   <div class="stat">
-    <div class="number">28</div>
-    <div class="label">GCP Services</div>
+    <div class="number">84</div>
+    <div class="label">Cloud Services</div>
   </div>
 </div>
 
@@ -159,6 +183,9 @@ cd claude-skills
 /gcp-cloud-run service my-api
 /gcp-bigquery "analytics pipeline with partitioning"
 /gcp-vertex-ai "RAG pipeline with Gemini"
+/azure-container-apps my-api
+/azure-openai chat "RAG with AI Search"
+/azure-bicep "VNet with AKS and Cosmos DB"
 ```
 
 ## How It Works

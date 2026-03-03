@@ -42,6 +42,10 @@ export default defineConfig({
           { text: 'GCP Data & Storage', link: '/skills/gcp-data/' },
           { text: 'GCP Messaging, Security & Identity', link: '/skills/gcp-integration/' },
           { text: 'GCP DevOps & AI', link: '/skills/gcp-devops/' },
+          { text: 'Azure Compute & Networking', link: '/skills/azure-compute/' },
+          { text: 'Azure Data & Storage', link: '/skills/azure-data/' },
+          { text: 'Azure Messaging, Security & Identity', link: '/skills/azure-integration/' },
+          { text: 'Azure DevOps & AI', link: '/skills/azure-devops/' },
         ]
       },
       { text: 'Reference', link: '/reference/skill-format' },
@@ -305,6 +309,66 @@ export default defineConfig({
             { text: 'Vertex AI', link: '/skills/gcp-devops/gcp-vertex-ai' },
             { text: 'Cloud DNS', link: '/skills/gcp-devops/gcp-cloud-dns' },
             { text: 'Workflows', link: '/skills/gcp-devops/gcp-workflows' },
+          ]
+        }
+      ],
+      '/skills/azure-compute/': [
+        {
+          text: 'Azure Compute & Networking',
+          items: [
+            { text: 'Overview', link: '/skills/azure-compute/' },
+            { text: 'Azure Functions', link: '/skills/azure-compute/azure-functions' },
+            { text: 'Virtual Machines', link: '/skills/azure-compute/azure-vm' },
+            { text: 'Container Apps', link: '/skills/azure-compute/azure-container-apps' },
+            { text: 'AKS', link: '/skills/azure-compute/azure-aks' },
+            { text: 'Virtual Network', link: '/skills/azure-compute/azure-vnet' },
+            { text: 'Application Gateway', link: '/skills/azure-compute/azure-app-gateway' },
+            { text: 'Front Door', link: '/skills/azure-compute/azure-front-door' },
+          ]
+        }
+      ],
+      '/skills/azure-data/': [
+        {
+          text: 'Azure Data & Storage',
+          items: [
+            { text: 'Overview', link: '/skills/azure-data/' },
+            { text: 'Blob Storage', link: '/skills/azure-data/azure-blob-storage' },
+            { text: 'Azure SQL', link: '/skills/azure-data/azure-sql' },
+            { text: 'Cosmos DB', link: '/skills/azure-data/azure-cosmos-db' },
+            { text: 'Cache for Redis', link: '/skills/azure-data/azure-cache-redis' },
+            { text: 'Event Hubs', link: '/skills/azure-data/azure-event-hubs' },
+            { text: 'Key Vault', link: '/skills/azure-data/azure-key-vault' },
+            { text: 'Synapse Analytics', link: '/skills/azure-data/azure-synapse' },
+          ]
+        }
+      ],
+      '/skills/azure-integration/': [
+        {
+          text: 'Azure Messaging, Security & Identity',
+          items: [
+            { text: 'Overview', link: '/skills/azure-integration/' },
+            { text: 'Service Bus', link: '/skills/azure-integration/azure-service-bus' },
+            { text: 'Event Grid', link: '/skills/azure-integration/azure-event-grid' },
+            { text: 'Logic Apps', link: '/skills/azure-integration/azure-logic-apps' },
+            { text: 'Entra ID', link: '/skills/azure-integration/azure-entra-id' },
+            { text: 'RBAC', link: '/skills/azure-integration/azure-rbac' },
+            { text: 'API Management', link: '/skills/azure-integration/azure-api-management' },
+            { text: 'App Configuration', link: '/skills/azure-integration/azure-app-config' },
+          ]
+        }
+      ],
+      '/skills/azure-devops/': [
+        {
+          text: 'Azure DevOps & AI',
+          items: [
+            { text: 'Overview', link: '/skills/azure-devops/' },
+            { text: 'DevOps Pipelines', link: '/skills/azure-devops/azure-devops-pipelines' },
+            { text: 'Azure Monitor', link: '/skills/azure-devops/azure-monitor' },
+            { text: 'Terraform', link: '/skills/azure-devops/azure-terraform' },
+            { text: 'Azure OpenAI', link: '/skills/azure-devops/azure-openai' },
+            { text: 'Azure DNS', link: '/skills/azure-devops/azure-dns' },
+            { text: 'Bicep', link: '/skills/azure-devops/azure-bicep' },
+            { text: 'Durable Functions', link: '/skills/azure-devops/azure-durable-functions' },
           ]
         }
       ],
