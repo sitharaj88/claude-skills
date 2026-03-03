@@ -38,6 +38,10 @@ export default defineConfig({
           { text: 'Relational Databases', link: '/skills/db-relational/' },
           { text: 'NoSQL Databases', link: '/skills/db-nosql/' },
           { text: 'ORMs, BaaS & Design', link: '/skills/db-tools/' },
+          { text: 'GCP Compute & Networking', link: '/skills/gcp-compute/' },
+          { text: 'GCP Data & Storage', link: '/skills/gcp-data/' },
+          { text: 'GCP Messaging, Security & Identity', link: '/skills/gcp-integration/' },
+          { text: 'GCP DevOps & AI', link: '/skills/gcp-devops/' },
         ]
       },
       { text: 'Reference', link: '/reference/skill-format' },
@@ -241,6 +245,66 @@ export default defineConfig({
             { text: 'Supabase', link: '/skills/db-tools/db-supabase' },
             { text: 'Firebase', link: '/skills/db-tools/db-firebase' },
             { text: 'Schema Design', link: '/skills/db-tools/db-design' },
+          ]
+        }
+      ],
+      '/skills/gcp-compute/': [
+        {
+          text: 'GCP Compute & Networking',
+          items: [
+            { text: 'Overview', link: '/skills/gcp-compute/' },
+            { text: 'Cloud Functions', link: '/skills/gcp-compute/gcp-cloud-functions' },
+            { text: 'Compute Engine', link: '/skills/gcp-compute/gcp-compute-engine' },
+            { text: 'Cloud Run', link: '/skills/gcp-compute/gcp-cloud-run' },
+            { text: 'GKE', link: '/skills/gcp-compute/gcp-gke' },
+            { text: 'VPC Network', link: '/skills/gcp-compute/gcp-vpc' },
+            { text: 'Load Balancing', link: '/skills/gcp-compute/gcp-load-balancing' },
+            { text: 'Cloud CDN', link: '/skills/gcp-compute/gcp-cloud-cdn' },
+          ]
+        }
+      ],
+      '/skills/gcp-data/': [
+        {
+          text: 'GCP Data & Storage',
+          items: [
+            { text: 'Overview', link: '/skills/gcp-data/' },
+            { text: 'Cloud Storage', link: '/skills/gcp-data/gcp-cloud-storage' },
+            { text: 'Cloud SQL', link: '/skills/gcp-data/gcp-cloud-sql' },
+            { text: 'Firestore', link: '/skills/gcp-data/gcp-firestore' },
+            { text: 'Bigtable', link: '/skills/gcp-data/gcp-bigtable' },
+            { text: 'Spanner', link: '/skills/gcp-data/gcp-spanner' },
+            { text: 'Memorystore', link: '/skills/gcp-data/gcp-memorystore' },
+            { text: 'BigQuery', link: '/skills/gcp-data/gcp-bigquery' },
+          ]
+        }
+      ],
+      '/skills/gcp-integration/': [
+        {
+          text: 'GCP Messaging, Security & Identity',
+          items: [
+            { text: 'Overview', link: '/skills/gcp-integration/' },
+            { text: 'Pub/Sub', link: '/skills/gcp-integration/gcp-pubsub' },
+            { text: 'Cloud Tasks', link: '/skills/gcp-integration/gcp-cloud-tasks' },
+            { text: 'Eventarc', link: '/skills/gcp-integration/gcp-eventarc' },
+            { text: 'IAM', link: '/skills/gcp-integration/gcp-iam' },
+            { text: 'Secret Manager', link: '/skills/gcp-integration/gcp-secret-manager' },
+            { text: 'Cloud Armor', link: '/skills/gcp-integration/gcp-cloud-armor' },
+            { text: 'Identity Platform', link: '/skills/gcp-integration/gcp-identity-platform' },
+          ]
+        }
+      ],
+      '/skills/gcp-devops/': [
+        {
+          text: 'GCP DevOps & AI',
+          items: [
+            { text: 'Overview', link: '/skills/gcp-devops/' },
+            { text: 'Cloud Build', link: '/skills/gcp-devops/gcp-cloud-build' },
+            { text: 'Cloud Deploy', link: '/skills/gcp-devops/gcp-cloud-deploy' },
+            { text: 'Cloud Monitoring', link: '/skills/gcp-devops/gcp-cloud-monitoring' },
+            { text: 'Terraform', link: '/skills/gcp-devops/gcp-terraform' },
+            { text: 'Vertex AI', link: '/skills/gcp-devops/gcp-vertex-ai' },
+            { text: 'Cloud DNS', link: '/skills/gcp-devops/gcp-cloud-dns' },
+            { text: 'Workflows', link: '/skills/gcp-devops/gcp-workflows' },
           ]
         }
       ],

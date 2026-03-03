@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Skills
   text: Supercharge Your Development Workflow
-  tagline: 70 production-ready slash commands for Claude Code — from smart commits and database management to full AWS infrastructure.
+  tagline: 98 production-ready slash commands for Claude Code — from smart commits and database management to full AWS and GCP infrastructure.
   actions:
     - theme: brand
       text: Get Started
@@ -94,15 +94,39 @@ features:
     details: Prisma, Drizzle, TypeORM, Supabase, Firebase, and schema design — type-safe queries, RLS policies, and ER diagram generation.
     link: /skills/db-tools/
     linkText: 6 skills →
+
+  - icon: ⚙️
+    title: GCP Compute & Networking
+    details: Cloud Functions, Compute Engine, Cloud Run, GKE, VPC, Load Balancing, and Cloud CDN — production-ready GCP infrastructure.
+    link: /skills/gcp-compute/
+    linkText: 7 skills →
+
+  - icon: 🗄️
+    title: GCP Data & Storage
+    details: Cloud Storage, Cloud SQL, Firestore, Bigtable, Spanner, Memorystore, and BigQuery — from schemas to analytics pipelines.
+    link: /skills/gcp-data/
+    linkText: 7 skills →
+
+  - icon: 🔑
+    title: GCP Security, Messaging & Identity
+    details: IAM, Cloud Armor, Identity Platform, Pub/Sub, Cloud Tasks, Eventarc, and Secret Manager for secure event-driven architectures.
+    link: /skills/gcp-integration/
+    linkText: 7 skills →
+
+  - icon: 🤖
+    title: GCP DevOps & AI
+    details: Cloud Build, Cloud Deploy, Cloud Monitoring, Terraform, Vertex AI, Cloud DNS, and Workflows for CI/CD and ML pipelines.
+    link: /skills/gcp-devops/
+    linkText: 7 skills →
 ---
 
 <div class="stats-row">
   <div class="stat">
-    <div class="number">70</div>
+    <div class="number">98</div>
     <div class="label">Skills</div>
   </div>
   <div class="stat">
-    <div class="number">14</div>
+    <div class="number">18</div>
     <div class="label">Categories</div>
   </div>
   <div class="stat">
@@ -110,8 +134,8 @@ features:
     <div class="label">AWS Services</div>
   </div>
   <div class="stat">
-    <div class="number">14</div>
-    <div class="label">Databases</div>
+    <div class="number">28</div>
+    <div class="label">GCP Services</div>
   </div>
 </div>
 
@@ -132,6 +156,9 @@ cd claude-skills
 /aws-bedrock knowledge-base "product docs RAG"
 /db-postgres "users table with auth and profiles"
 /db-prisma "schema for e-commerce app"
+/gcp-cloud-run service my-api
+/gcp-bigquery "analytics pipeline with partitioning"
+/gcp-vertex-ai "RAG pipeline with Gemini"
 ```
 
 ## How It Works

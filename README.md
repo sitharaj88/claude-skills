@@ -1,6 +1,6 @@
 <p align="center">
   <strong>Claude Skills</strong><br>
-  70 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
+  98 production-ready slash commands for <a href="https://claude.ai/code">Claude Code</a>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## What is this?
 
-A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
+A curated collection of world-class [Claude Code](https://claude.ai/code) skills — custom slash commands that supercharge your development workflow. From smart commits and database management to full AWS and GCP infrastructure, each skill auto-detects your project's framework, conventions, and patterns.
 
 ## Skills
 
@@ -161,6 +161,54 @@ Full coverage for **Android Native**, **iOS Native**, **React Native**, and **Fl
 | **Amplify** | `/aws-amplify [feature] [framework]` | Generates Amplify Gen 2 apps with authentication, data models, storage, and hosting |
 | **Bedrock** | `/aws-bedrock [model\|agent\|kb]` | Generates AI/ML integrations with foundation models, knowledge bases, agents, and guardrails |
 
+### GCP — Compute & Networking
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Cloud Functions** | `/gcp-cloud-functions [runtime] [trigger]` | Generates Cloud Functions with triggers, IAM, VPC connectors, and deployment configs |
+| **Compute Engine** | `/gcp-compute-engine [machine-type] [image]` | Generates instance templates, managed instance groups, autoscaling, and startup scripts |
+| **Cloud Run** | `/gcp-cloud-run [service\|job] [name]` | Generates Cloud Run services and jobs with auto-scaling, traffic splitting, and Cloud SQL connections |
+| **GKE** | `/gcp-gke [cluster-name]` | Generates GKE clusters with Autopilot/Standard mode, Workload Identity, and Helm charts |
+| **VPC Network** | `/gcp-vpc [cidr] [region]` | Generates VPC networks with subnets, firewall rules, Cloud NAT, and Private Service Connect |
+| **Load Balancing** | `/gcp-load-balancing [type] [backend]` | Generates load balancers with SSL, URL maps, health checks, and Cloud Armor integration |
+| **Cloud CDN** | `/gcp-cloud-cdn [origin-type]` | Generates CDN configs with caching policies, signed URLs, and edge security |
+
+### GCP — Data & Storage
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Cloud Storage** | `/gcp-cloud-storage [purpose]` | Generates GCS buckets with lifecycle rules, IAM, encryption, CORS, and static website hosting |
+| **Cloud SQL** | `/gcp-cloud-sql [engine] [purpose]` | Generates Cloud SQL instances with HA, replicas, Auth Proxy, and IAM database authentication |
+| **Firestore** | `/gcp-firestore [operation]` | Generates Firestore data models, security rules, indexes, and real-time query patterns |
+| **Bigtable** | `/gcp-bigtable [use-case]` | Generates Bigtable schemas with row key design, column families, and replication configs |
+| **Spanner** | `/gcp-spanner [operation]` | Generates Spanner schemas with interleaved tables, change streams, and global distribution |
+| **Memorystore** | `/gcp-memorystore [redis\|memcached]` | Generates Memorystore instances with caching strategies, HA, and VPC connectivity |
+| **BigQuery** | `/gcp-bigquery [operation]` | Generates BigQuery datasets, partitioned tables, ML models, and analytics pipelines |
+
+### GCP — Messaging, Security & Identity
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Pub/Sub** | `/gcp-pubsub [pattern]` | Generates topics, subscriptions, dead-letter policies, schema validation, and messaging patterns |
+| **Cloud Tasks** | `/gcp-cloud-tasks [target-type]` | Generates task queues with rate limiting, retries, scheduling, and HTTP/App Engine targets |
+| **Eventarc** | `/gcp-eventarc [source] [destination]` | Generates event-driven triggers from 60+ Google sources to Cloud Run/Functions/Workflows |
+| **IAM** | `/gcp-iam [role\|policy\|service-account]` | Generates IAM policies, custom roles, Workload Identity Federation, and org policies |
+| **Secret Manager** | `/gcp-secret-manager [operation]` | Generates secrets with versioning, rotation, CMEK encryption, and replication policies |
+| **Cloud Armor** | `/gcp-cloud-armor [policy-type]` | Generates WAF rules, DDoS protection, rate limiting, bot management, and geo-blocking |
+| **Identity Platform** | `/gcp-identity-platform [auth-method]` | Generates multi-tenant auth with social login, SAML/OIDC, MFA, and blocking functions |
+
+### GCP — DevOps & AI
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| **Cloud Build** | `/gcp-cloud-build [trigger-type]` | Generates CI/CD pipelines with multi-step builds, triggers, private pools, and approval gates |
+| **Cloud Deploy** | `/gcp-cloud-deploy [target]` | Generates progressive delivery pipelines with canary deployments and rollback strategies |
+| **Cloud Monitoring** | `/gcp-cloud-monitoring [type]` | Generates dashboards, alerting policies, SLOs, logging configs, and uptime checks |
+| **Terraform** | `/gcp-terraform [resources]` | Generates Terraform configs for GCP with modules, state management, and Cloud Foundation Toolkit |
+| **Vertex AI** | `/gcp-vertex-ai [operation]` | Generates ML pipelines, model deployments, Gemini API integration, and RAG workflows |
+| **Cloud DNS** | `/gcp-cloud-dns [domain] [type]` | Generates DNS zones, records, DNSSEC, routing policies, and response policies |
+| **Workflows** | `/gcp-workflows [pattern]` | Generates serverless workflow orchestrations with service connectors and error handling |
+
 ## Installation
 
 ### Quick install (all skills)
@@ -242,6 +290,15 @@ Once installed, invoke any skill in Claude Code with its slash command:
 /db-prisma "schema for e-commerce app"
 /db-design "users, orders, products, reviews"
 
+# GCP infrastructure
+/gcp-cloud-functions nodejs20 pubsub "process events"
+/gcp-cloud-run service my-api
+/gcp-gke my-cluster
+/gcp-bigquery "analytics pipeline with partitioning"
+/gcp-iam service-account "Cloud Run with BigQuery access"
+/gcp-terraform "VPC with Cloud Run and Cloud SQL"
+/gcp-vertex-ai "RAG pipeline with Gemini"
+
 # Security & analysis
 /security-audit full
 /performance-audit backend
@@ -252,7 +309,7 @@ Skills automatically detect your project's framework, conventions, and patterns 
 
 ## Documentation
 
-Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 70 skills with usage guides, examples, and a reference section.
+Full documentation is available at **[sitharaj88.github.io/claude-skills](https://sitharaj88.github.io/claude-skills/)** — built with VitePress, covering all 98 skills with usage guides, examples, and a reference section.
 
 ## Skill Design
 
@@ -338,7 +395,35 @@ claude-skills/
 │   ├── aws-codepipeline/
 │   ├── aws-route53/
 │   ├── aws-amplify/
-│   └── aws-bedrock/
+│   ├── aws-bedrock/
+│   ├── gcp-cloud-functions/       # GCP Compute & Networking (7 skills)
+│   ├── gcp-compute-engine/
+│   ├── gcp-cloud-run/
+│   ├── gcp-gke/
+│   ├── gcp-vpc/
+│   ├── gcp-load-balancing/
+│   ├── gcp-cloud-cdn/
+│   ├── gcp-cloud-storage/         # GCP Data & Storage (7 skills)
+│   ├── gcp-cloud-sql/
+│   ├── gcp-firestore/
+│   ├── gcp-bigtable/
+│   ├── gcp-spanner/
+│   ├── gcp-memorystore/
+│   ├── gcp-bigquery/
+│   ├── gcp-pubsub/                # GCP Messaging, Security & Identity (7 skills)
+│   ├── gcp-cloud-tasks/
+│   ├── gcp-eventarc/
+│   ├── gcp-iam/
+│   ├── gcp-secret-manager/
+│   ├── gcp-cloud-armor/
+│   ├── gcp-identity-platform/
+│   ├── gcp-cloud-build/           # GCP DevOps & AI (7 skills)
+│   ├── gcp-cloud-deploy/
+│   ├── gcp-cloud-monitoring/
+│   ├── gcp-terraform/
+│   ├── gcp-vertex-ai/
+│   ├── gcp-cloud-dns/
+│   └── gcp-workflows/
 ├── docs/                          # VitePress documentation site
 ├── install.sh                     # Skill installer (symlink-based)
 ├── package.json
