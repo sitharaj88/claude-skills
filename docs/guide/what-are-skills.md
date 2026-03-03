@@ -93,8 +93,50 @@ Skills accept arguments for flexibility:
 | Personal | `~/.claude/skills/` | All your projects |
 | Project | `.claude/skills/` | This project only |
 
+## All 147 Skills by Category
+
+### Core Development
+- [Developer Workflow](/skills/workflow/) — Smart Commit, Review PR, Create PR, Debug Issue, Test Writer
+- [Code Generation](/skills/generation/) — Generate Component, Generate Endpoint, Implement Feature, Scaffold Project
+- [Analysis & Documentation](/skills/analysis/) — Analyze Codebase, Generate Arch Doc, Generate API Doc, Generate Changelog, Refactor Module
+- [Mobile Development](/skills/mobile/) — Generate Screen, Scaffold Mobile, Mobile Test Writer, Native Bridge, App Store Prep, Mobile CI Setup
+- [Database & DevOps](/skills/devops/) — Generate Migration, Docker Setup, Deploy Config, Setup Monitoring
+- [Security & Performance](/skills/security/) — Security Audit, Performance Audit, Dependency Audit
+- [Migration](/skills/migration/) — Migrate Code
+
+### Databases
+- [Relational Databases](/skills/db-relational/) — PostgreSQL, MySQL, SQLite
+- [NoSQL Databases](/skills/db-nosql/) — MongoDB, Redis, Elasticsearch, Cassandra, Neo4j
+- [ORMs, BaaS & Design](/skills/db-tools/) — Prisma, Drizzle, TypeORM, Supabase, Firebase, Schema Design
+
+### AWS (28 skills)
+- [Compute & Networking](/skills/aws-compute/) — Lambda, EC2, ECS/Fargate, EKS, VPC, API Gateway, CloudFront
+- [Data & Storage](/skills/aws-data/) — S3, DynamoDB, RDS/Aurora, ElastiCache, Kinesis, Secrets Manager
+- [Messaging, Security & Auth](/skills/aws-integration/) — SQS/SNS, EventBridge, Step Functions, SES, IAM, Cognito, WAF
+- [IaC, DevOps & AI](/skills/aws-devops/) — CloudFormation, CDK, Terraform, CloudWatch, CodePipeline, Route 53, Amplify, Bedrock
+
+### GCP (28 skills)
+- [Compute & Networking](/skills/gcp-compute/) — Cloud Functions, Compute Engine, Cloud Run, GKE, VPC, Load Balancing, Cloud CDN
+- [Data & Storage](/skills/gcp-data/) — Cloud Storage, Cloud SQL, Firestore, Bigtable, Spanner, Memorystore, BigQuery
+- [Messaging, Security & Identity](/skills/gcp-integration/) — Pub/Sub, Cloud Tasks, Eventarc, IAM, Secret Manager, Cloud Armor, Identity Platform
+- [DevOps & AI](/skills/gcp-devops/) — Cloud Build, Cloud Deploy, Cloud Monitoring, Terraform, Vertex AI, Cloud DNS, Workflows
+
+### Azure (28 skills)
+- [Compute & Networking](/skills/azure-compute/) — Azure Functions, VMs, Container Apps, AKS, VNet, Application Gateway, Front Door
+- [Data & Storage](/skills/azure-data/) — Blob Storage, Azure SQL, Cosmos DB, Cache for Redis, Event Hubs, Key Vault, Synapse
+- [Messaging, Security & Identity](/skills/azure-integration/) — Service Bus, Event Grid, Logic Apps, Entra ID, RBAC, API Management, App Configuration
+- [DevOps & AI](/skills/azure-devops/) — DevOps Pipelines, Azure Monitor, Terraform, Azure OpenAI, Azure DNS, Bicep, Durable Functions
+
+### Cloudflare (7 skills)
+- [Cloudflare](/skills/cloudflare/) — Workers, Pages, R2, D1, KV, Queues, Workers AI
+
+### Vercel (7 skills)
+- [Vercel](/skills/vercel/) — Deploy, Functions, KV, Postgres, Blob, AI SDK, Edge Config
+
+### DigitalOcean (7 skills)
+- [DigitalOcean](/skills/digitalocean/) — Droplets, App Platform, Kubernetes, Managed Databases, Spaces, Functions, Networking
+
 ## Next Steps
 
 - [Install the skills](/guide/installation) in under a minute
-- [Browse all 28 skills](/skills/workflow/) to see what's available
 - [Create your own skills](/guide/authoring) with the authoring guide
