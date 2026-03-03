@@ -177,3 +177,14 @@
   color: #fff;
   box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
 }
+
+/* Always show dark mode toggle in topbar, even on mobile */
+.VPNavBarAppearance {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Hide the duplicate toggle from mobile menu */
+.VPNavScreenAppearance {
+  display: none !important;
+}
